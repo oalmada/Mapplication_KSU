@@ -29,7 +29,7 @@ class ViewController: UIViewController {
         //let southWest = CLLocationCoordinate2D(latitude: 41.1245, longitude: -81.3785)
         //let northEast = CLLocationCoordinate2D(latitude: 41.1701, longitude: -81.3102)
         
-        //var scaleKey: Float = 10.0
+        //var scaleKey: Float = 10.0//
         
         let southWest = CLLocationCoordinate2D(latitude: 41.1245 + 0.0125 + 0.00028, longitude: -81.3785 + 0.010 + 0.0040)
         let northEast = CLLocationCoordinate2D(latitude: 41.1701 - 0.0125 + 0.00028, longitude: -81.3102 - 0.010 + 0.0040)
