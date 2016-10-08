@@ -26,23 +26,21 @@ class ViewController: UIViewController {
         marker.snippet = "Kent State"
         marker.map = mapView
         
-        //let southWest = CLLocationCoordinate2D(latitude: 41.1245, longitude: -81.3785)
-        //let northEast = CLLocationCoordinate2D(latitude: 41.1701, longitude: -81.3102)
+        let sModY: Double = 0.01260;        let sModX: Double = 0.010    // Scale modifiers for X and Y axis
+        let tModY: Double = 0.000286;       let tModX: Double = 0.0040   // Transform modifiers for X and Y axis
         
-        //var scaleKey: Float = 10.0//
+        let  latN: Double = 41.1701;        let latS: Double = 41.1245
+        let  lonE: Double = -81.3102;       let lonW: Double = -81.3785
         
-        let southWest = CLLocationCoordinate2D(latitude: 41.1245 + 0.0125 + 0.00028, longitude: -81.3785 + 0.010 + 0.0040)
-        let northEast = CLLocationCoordinate2D(latitude: 41.1701 - 0.0125 + 0.00028, longitude: -81.3102 - 0.010 + 0.0040)
-        
-        //let southWest = CLLocationCoordinate2D(latitude: 41.1245 + 0.0003, longitude: -81.3785 + 0.0040)
-        //let northEast = CLLocationCoordinate2D(latitude: 41.1701 + 0.0003, longitude: -81.3102 + 0.0040)
+        let southWest = CLLocationCoordinate2D(latitude: latS + sModY + tModY, longitude: lonW + sModX + tModX)
+        let northEast = CLLocationCoordinate2D(latitude: latN - sModY + tModY, longitude: lonE - sModX + tModX)
         
         let overlayBounds = GMSCoordinateBounds(coordinate: southWest, coordinate: northEast)
         
         let icon = UIImage(named: "Kent_State_A1_4k.png")
         
         let overlay = GMSGroundOverlay(bounds: overlayBounds, icon: icon)
-        overlay.bearing = 359
+        overlay.bearing = 0
         overlay.map = mapView
     }
 
