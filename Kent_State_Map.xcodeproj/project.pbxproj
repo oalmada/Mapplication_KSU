@@ -33,6 +33,8 @@
 		EEC0AF8D1DA97F8800338F0D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEC0AF801DA97F8800338F0D /* QuartzCore.framework */; };
 		EEC0AF8E1DA97F8800338F0D /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEC0AF811DA97F8800338F0D /* SystemConfiguration.framework */; };
 		EEC0AF8F1DA97F8800338F0D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEC0AF821DA97F8800338F0D /* UIKit.framework */; };
+		EEC0AF991DA9F10600338F0D /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEC0AF971DA9F10600338F0D /* Fabric.framework */; };
+		EEC0AF9A1DA9F10600338F0D /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEC0AF981DA9F10600338F0D /* Crashlytics.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +86,8 @@
 		EEC0AF801DA97F8800338F0D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		EEC0AF811DA97F8800338F0D /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		EEC0AF821DA97F8800338F0D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		EEC0AF971DA9F10600338F0D /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
+		EEC0AF981DA9F10600338F0D /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,11 +105,13 @@
 				EEC0AF8A1DA97F8800338F0D /* libc++.tbd in Frameworks */,
 				EEC0AF8B1DA97F8800338F0D /* libz.tbd in Frameworks */,
 				EEC0AF8C1DA97F8800338F0D /* OpenGLES.framework in Frameworks */,
+				EEC0AF9A1DA9F10600338F0D /* Crashlytics.framework in Frameworks */,
 				EEC0AF8D1DA97F8800338F0D /* QuartzCore.framework in Frameworks */,
 				EEC0AF8E1DA97F8800338F0D /* SystemConfiguration.framework in Frameworks */,
 				EEC0AF8F1DA97F8800338F0D /* UIKit.framework in Frameworks */,
 				EEC0AF6E1DA97E3000338F0D /* GoogleMapsBase.framework in Frameworks */,
 				EEC0AF6C1DA97E3000338F0D /* GoogleMaps.framework in Frameworks */,
+				EEC0AF991DA9F10600338F0D /* Fabric.framework in Frameworks */,
 				EEC0AF6D1DA97E3000338F0D /* GoogleMapsCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -130,6 +136,8 @@
 		EEC0AF2F1DA97DEE00338F0D = {
 			isa = PBXGroup;
 			children = (
+				EEC0AF971DA9F10600338F0D /* Fabric.framework */,
+				EEC0AF981DA9F10600338F0D /* Crashlytics.framework */,
 				EEC0AF711DA97E4D00338F0D /* Kent_State_A1_4k.png */,
 				EEC0AF6F1DA97E3C00338F0D /* GoogleMaps.bundle */,
 				EEC0AF691DA97E3000338F0D /* GoogleMaps.framework */,
@@ -214,6 +222,7 @@
 				EEC0AF341DA97DEE00338F0D /* Sources */,
 				EEC0AF351DA97DEE00338F0D /* Frameworks */,
 				EEC0AF361DA97DEE00338F0D /* Resources */,
+				EEC0AF961DA9F0D100338F0D /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -335,6 +344,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		EEC0AF961DA9F0D100338F0D /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Fabric.framework/run 36d72ba6a0cc0ec9749ef0f84ac5b29617cad3f8 c58417e2ea6f842ea49c3fd97d435c2992ebacaa4425c0da571f56e45ec11bc5";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		EEC0AF341DA97DEE00338F0D /* Sources */ = {
